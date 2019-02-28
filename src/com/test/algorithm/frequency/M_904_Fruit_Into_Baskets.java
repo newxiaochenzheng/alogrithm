@@ -21,9 +21,8 @@ public class M_904_Fruit_Into_Baskets {
 
     }
 
-
     private int longestKUniqueSub(int[] tree, int k) {
-        if (k >= tree.length) {
+        if (k >=tree.length) {
             return tree.length;
         }
         Map<Integer, Integer> map = new HashMap<>();
@@ -32,13 +31,12 @@ public class M_904_Fruit_Into_Baskets {
         int start = 0;
         for (int i = 1; i < tree.length; i++) {
             if (map.containsKey(tree[i])) {
-                int count = map.get(tree[i]);
-                map.put(tree[i], count + 1);
-            } else {
+                map.put(tree[i], map.get(tree[i])+ 1);
+            }else{
                 map.put(tree[i], 1);
             }
             if (map.size() <= k) {
-                result = Math.max(result, i - start);
+                result = Math.max(result, i - start + 1);
             } else {
                 while (map.size() > k) {
                     int count = map.get(tree[start]);

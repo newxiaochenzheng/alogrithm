@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FourSum {
+public class M_18_FourSum {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> lists = new ArrayList<>();
         if (nums == null || nums.length < 4) {
@@ -17,7 +17,7 @@ public class FourSum {
                     if (j == i + 1 || nums[j] != nums[j - 1]) {
                         int low = j + 1;
                         int high = nums.length - 1;
-                        int sum = target - nums[i];
+                        int sum = target - nums[i] - nums[j];
                         while (low < high) {
                             if (nums[low] + nums[high] == sum) {
                                 lists.add(Arrays.asList(nums[i], nums[j], nums[low], nums[high]));
