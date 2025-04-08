@@ -3,6 +3,9 @@ package com.test.algorithm;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 最长非重复子串
+ */
 public class LongestSubString {
     public static void main(String[] args) {
         String s = "abcdefg13jkjkkskflklklkj";

@@ -4,7 +4,7 @@ public class TopKMax {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 23, 4, 5, 5, 6, 7, 8, -4, 5, 6, 7};
-        int[] result = new TopKMax().topKMax(array, 2);
+        int[] result = new TopKMax().topKMax(array, 5);
         SortUtil.print(result);
     }
 
